@@ -5,3 +5,6 @@ resource "azurerm_resource_group" "rg" {
   location = each.value.location
   tags     = merge(var.tags, each.value.additional_tags)
 }
+
+data "azurerm_client_config" "current" {
+}
