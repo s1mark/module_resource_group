@@ -1,9 +1,12 @@
-variable "rg_name" {}
-variable "rg_location" {
-  default = "germanywesteurope"
+variable "resource_groups" {
+  type = map(object({
+    location        = string
+    additional_tags = map(string)
+  }))
+  default = {}
 }
+
 variable "tags" {
-  default = {
-    CreatedBy = "terraform"
-  }
+  type        = map(string)
+  default     = {}
 }
