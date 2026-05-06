@@ -3,16 +3,15 @@ Example for inputs
 inputs = {
   tags = {
     ManagedBy = "Terragrunt"
-    Project   = "CloudInfrastructure"
   }
 
   resource_groups = {
     "rg-web-prod" = {
-      location        = "eastus"
+      location        = "germanywestcentral"
       additional_tags = { Tier = "Web", Env = "Prod" }
     },
     "rg-data-prod" = {
-      location        = "eastus"
+      location        = "germanywestcentral"
       additional_tags = { Tier = "Data", Env = "Prod" }
     },
     "rg-shared-northeurope" = {
